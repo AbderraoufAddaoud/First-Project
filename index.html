@@ -1,0 +1,464 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+  <title>First attempt</title>
+  <link rel="icon"  href="fc.png">
+  
+<style>
+html, body{
+	margin:0;
+	padding:0;
+}
+
+/*************************navigation Bar********************************/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  overflow: hidden;
+  max-height: 85px;
+  z-index: 2;
+  width: 100%;
+
+  
+}
+
+li {
+  float: left;
+}
+
+#h a {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size:large;
+  padding: 21px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+
+li a:hover:not(#logo,#booking){
+  background-color: darkgoldenrod;
+}
+
+#home {
+  color:darkgoldenrod ;
+}
+ul #logo{
+    font-family: 'Lucida Console', Monaco, monospace;
+    font-size: x-large;
+    padding-left: 50px;
+    padding-right: 45px;
+}
+#booking{
+  float: right;
+  background-color: darkgoldenrod; 
+  height: 30px;
+  width: 150px; 
+  border: 2px solid black; 
+  border-radius: 5px;
+  margin-top: 18px; 
+  margin-right: 80px;
+  text-align: center;
+  /*line-height:35px;*/
+  color: black; 
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif; 
+  padding-top: 12px ;
+  vertical-align: middle;
+}
+
+#booking:hover{
+    background-color: goldenrod;
+    border-color: black;
+    cursor: pointer;
+}
+
+/**************************************welcome paragraph*********************************************/
+.f1{
+	background-image: url('ham2.png');
+	width:100% !important;
+  margin: 0 0 0 0;
+	top:0;
+	left:0;
+	right:0 !important;
+	height:960px;
+  position:absolute;
+  z-index: -2;
+  background-repeat: no-repeat !important;
+  
+    
+}
+
+.f1 p{
+    width: 600px;
+    padding: 0 0 0 50px;
+    margin: 0;
+    user-select: text;
+    z-index: 15;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.f1 p:hover{
+    cursor: text;
+
+}
+
+.f1 #welcome{
+    padding: 250px 0 0 50px;
+    font-size: 50px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: text;
+}
+
+
+
+#getApp {
+    width: 110px;
+    height: 20px;
+    margin: 495px 0 0 50px;
+    padding: 10px 0 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    z-index: 10;
+
+}
+#getApp #button1{
+    margin: 10px 0 10px 15px;
+    text-align: center;
+
+}
+#getApp:hover {
+    background-color: darkgoldenrod;
+    border: 1 solid black;
+    cursor:pointer;
+}
+
+/*********************************************-----------AnythingParagraph-----------*******************************************************/
+
+
+.f2{
+    background-image: url('tr.png');
+    width:100% ;
+    height:960px;
+    /*position:relative;*/
+    margin-top: 230px;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+}
+
+.f2 p{
+    width: 600px;
+    float: right;
+    margin: 0 280px 0 160px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+.f2 #anything{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 230px;
+    margin-bottom: 30px;
+}
+
+.f2 #contactUsButton{
+    width: 120px;
+    height: 20px;
+    margin: 550px 0 0 640px;
+    padding: 10px 0 10px 18px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+
+}
+#contactUsButton #button2{
+    margin: 10px 0 10px 10px;
+    text-align: center;
+}
+
+#contactUsButton:hover {
+    background-color: darkgoldenrod;
+    border: 2 solid black;
+    cursor:pointer;
+}
+
+
+/******************************************************************----------Offers--------*********************************************************/
+
+#offers{
+  position: static;
+  margin: 30px 30px 60px 110px;
+
+}
+
+
+#offers .gallery {
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px !important;
+  border-radius: 20px;
+  transition: width 0.5s;
+
+}
+
+#offers .gallery:hover {
+  border: 1px solid darkgoldenrod;
+  width: 308px;
+
+}
+
+#offers .gallery img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.desc {
+  padding: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+/*******************************************************------ContactUs----------************************************/
+
+#contactUs{
+  width: 100%;
+  margin-top: 500px;
+  position:static;
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+#contactUs div{
+  margin: 100px;
+  padding: 5px;
+  padding-left: 100px;
+  margin-top: 100px;
+  background-color: white;
+  border-radius: 30px;
+
+
+}
+
+#intouch{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: x-large;
+}
+
+#intouch h3{
+  margin-bottom: 2px;
+}
+
+#contactUs td img{
+  width: 540px;
+  margin-right: -15px;
+}
+
+#fname, #lname, #email{
+  width: 350px;
+  height: 32px;
+  margin: 5px;
+  padding: 15px;
+  color: dimgray;
+  border-radius: 15px;
+  border: 0px;
+  background-color: silver;
+}
+
+#send{
+  width: 350px;
+  height: 32px;
+  margin: 5px;
+  border: 0px solid black;
+  padding: 15px;
+  padding-top: 8px;
+  text-align: center;
+  background-color: darkgoldenrod;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#send:hover{
+  background-color: goldenrod;
+}
+
+
+
+
+#area{
+  width: 350px;
+  margin: 5px;
+  padding: 15px;
+  color: dimgray;
+  border-radius: 15px;
+  max-width: 420px;
+  border: 0px;
+  background-color: silver;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+    <!-------------------------Navigation bar------------------------------->
+
+  <ul>
+    <li id="h"><b><a class="active" id="logo" href="#home">Restaurent</a></b></li>
+    <li id="h"><a class="active" id="home" href="#home">Home</a></li>
+    <li id="h"><a href="#news">News</a></li>
+    <li id="h"><a href="#contact">Contact</a></li>
+    <li id="h"><a href="#about">About</a></li>
+    <a id="booking" href="#booking">Booking Now</a>
+    <!--
+    <li id="booking">
+    
+  </li>
+-->
+
+  </ul>
+
+
+  <!------------------------------------------------Welcome paragraph-------------------------------------------------->
+
+
+  <div class="f1">
+
+    <p id="welcome">Welcome!<p><br>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum repellat excepturi eveniet. Quaerat ducimus soluta voluptate, velit debitis tempora porro harum recusandae voluptas aut blanditiis expedita. Non, error nesciunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum repellat excepturi eveniet. Quaerat ducimus soluta voluptate, velit debitis tempora porro harum recusandae voluptas aut blanditiis expedita. Non, error nesciunt!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum repellat excepturi eveniet. Quaerat ducimus soluta voluptate, velit debitis tempora porro harum recusandae voluptas aut blanditiis expedita. Non, error nesciunt!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum repellat excepturi eveniet. Quaerat ducimus soluta voluptate, velit debitis tempora porro harum recusandae voluptas aut blanditiis expedita. Non, error nesciunt!
+    </p>
+  </div>
+
+  <div id="getApp">
+      <i class="fa-brands fa-android"></i><i id="button1">Get App</i>
+  </div>
+
+
+
+  
+<!-------------------------------------------------Anything paragraph---------------------------------------------------->
+
+  
+  <div class="f2">
+
+    <p id="anything">We'll make anything for you!</p><br>
+    <p>
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum repellat excepturi eveniet. Quaerat ducimus soluta voluptate, velit debitis tempora porro harum recusandae voluptas aut blanditiis expedita. Non, error nesciunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum repellat excepturi eveniet. Quaerat ducimus soluta voluptate, velit debitis tempora porro harum recusandae voluptas aut blanditiis expedita. Non, error nesciunt!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum repellat excepturi eveniet. Quaerat ducimus soluta voluptate, velit debitis tempora porro harum recusandae voluptas aut blanditiis expedita. Non, error nesciunt!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum repellat excepturi eveniet. Quaerat ducimus soluta voluptate, velit debitis tempora porro harum recusandae voluptas aut blanditiis expedita. Non, error nesciunt!
+
+    </p>
+    
+    <div id="contactUsButton">
+      <i class="fa-solid fa-envelope"></i><i id="button2">Contact US</i>
+    </div>
+  
+
+  </div>
+
+
+
+  <!----------------------------------------------images----------------------------------------------------------------->
+
+  <div id="offers">
+
+    <div class="gallery">
+      <a target="_blank" href="beef_steak1.png">
+        <img src="beef_steak1.png" alt="Beef Steak" width="600" height="400">
+      </a>
+      <div class="desc">Click here to order Grilled Beef</div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="pizza1.png">
+        <img src="pizza1.png" alt="Pizza" width="600" height="400">
+      </a>
+      <div class="desc">Click here to order Pizza</div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="hamburger1.png">
+        <img src="hamburger1.png" alt="Hamburger" width="600" height="400">
+      </a>
+      <div class="desc">Click here to order Hamburger</div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="chiken2.png">
+        <img src="chiken2.png" alt="Grilled Chiken" width="600" height="400">
+      </a>
+      <div class="desc">Click here to order Grilled Chiken</div>
+    </div>
+
+  </div>
+
+<!------------------------------------------------------------Contact_Us-------------------------------------------------------->
+
+
+
+  <div id="contactUs">
+    <div>
+
+    <table>
+
+      <tr>
+
+        <td>
+          <img src="contactUs.jpg" alt="contact-us-img">
+        </td>
+        <td>
+
+          <div id="intouch">
+            <h3>Get in touch</h3><br>
+            <input type="text" id="fname" placeholder="First Name"><br>
+            <input type="text" id="lname" placeholder="Last Name"><br>
+            <input type="text" id="email" placeholder="Email"><br>
+            <textarea name="Message" id="area" cols="30" rows="10" placeholder="Message"></textarea><br>
+            <input type="button" name="send" id="send" value="Send">
+            
+          </div>
+
+        </td>
+
+      </tr>
+
+
+    </table>
+    </div>
+
+
+  </div>
+
+
+
+
+
+</body>
+</html>
